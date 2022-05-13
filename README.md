@@ -1,1 +1,2 @@
 # Python
+THIS ARE THE SOLUTIONS
