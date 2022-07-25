@@ -4,21 +4,30 @@ def read_month():
     month = 0
     while month > 12 or month < 1:
         month = int(input("Choose a month: "))
-        if month == 8:
-            month = "0" + str(month)
+        #if month == 8:
+        #    month = "0" + str(month)
 
-        if exists("../FilesChapter7/weather_2018 " + str(month) + ".csv"):
-            return month
+        if month > 9 and month <= 12:
+            if exists("../FilesChapter7/weather_2018 " + str(month) + ".csv"):
+                return month
+            elif not exists("../FilesChapter7/weather_2018 " + str(month) + ".csv") and 12 >= month >= 1:
+                return "No data available for this month"
 
-        elif not exists("../FilesChapter7/weather_2018 " + str(month) + ".csv") and 12 >= month >= 1:
-            return "No data available for this month"
+        if month >= 1 and month < 10:
+            if exists("../FilesChapter7/weather_2018 0" + str(month) + ".csv"):
+                return month
+
+            elif not exists("../FilesChapter7/weather_2018 " + str(month) + ".csv") and 12 >= month >= 1:
+                return "No data available for this month"
 
 
 read_month = read_month()
 
 
-if type(read_month) == int or read_month == "08":
+if type(read_month) == int:
     print()
+    if read_month < 10:
+        read_month = "0" + str(read_month)
     with open("../FilesChapter7/weather_2018 " + str(read_month) + ".csv") as file:
         file.readline()
         line = file.readline()
