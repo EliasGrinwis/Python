@@ -1,7 +1,4 @@
 # Python
-THIS ARE THE SOLUTIONS
-
-
 - CHAPTER1 = Sequence
 - CHAPTER2 = Selection
 - CHAPTER3 = Iteration
