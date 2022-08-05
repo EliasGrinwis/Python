@@ -10,6 +10,7 @@
 - CHAPTER9 = XML files
 - CHAPTER10 = Set and Dictionary
 - CHAPTER11 = NumPy
+- CHAPTER12 = Rehearsal exercises
 
 
 
